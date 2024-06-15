@@ -1,0 +1,82 @@
+<section class="top">
+  <div class="container">
+    <h1 class="title">
+      Leasing from D&M
+    </h1>
+    <%= link_to 'FIND A CAR', '#', class: 'top__link' %>
+  </div>
+</section>
+<div class="slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url(<%= asset_path('slide-1.jpg') %>);"></div>
+      <div class="swiper-slide" style="background-image: url(<%= asset_path('slide-2.jpg') %>);"></div>
+      <div class="swiper-slide" style="background-image: url(<%= asset_path('slide-3.jpg') %>);"></div>
+      <div class="swiper-slide" style="background-image: url(<%= asset_path('slide-4.jpg') %>);"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<section class="why-lease">
+  <div class="container">
+    <h2 class="section-title">
+      Why Lease with D&M?
+    </h2>
+    <ul class="why-lease__list">
+      <li class="why-lease__item">
+        <%= image_tag 'why-lease-1.svg', class: 'why-lease__item-img', alt: 'why lease first'%>
+        <h3 class="why-lease__item-title">
+          Top Dealers
+        </h3>
+        <p class="why-lease__item-text">
+          TrueCar Certified Dealers compete for your business by providing discounted pricing on
+          in-stock inventory.
+        </p>
+      </li>
+      <li class="why-lease__item">
+        <%= image_tag 'why-lease-2.svg', class: 'why-lease__item-img', alt: 'why lease second'%>
+        <h3 class="why-lease__item-title">
+          Discounted Pricing
+        </h3>
+        <p class="why-lease__item-text">
+          View local inventory from the comfort of home and get access to guaranteed savings on the car 
+          of your choice.
+        </p>
+      </li>
+      <li class="why-lease__item">
+        <%= image_tag 'why-lease-3.svg', class: 'why-lease__item-img', alt: 'why lease third'%>
+        <h3 class="why-lease__item-title">
+          Lower Payments
+        </h3>
+        <p class="why-lease__item-text">
+          Get discounted pricing when you shop for a car or truck using TrueCar and save on your lease 
+          payment.
+        </p>
+      </li>
+      <li class="why-lease__item">
+        <%= image_tag 'why-lease-4.svg', class: 'why-lease__item-img', alt: 'why lease fourth'%>
+        <h3 class="why-lease__item-title">
+          Easy Upgrade
+        </h3>
+        <p class="why-lease__item-text">
+          Easy to upgrade to the newest vehicle model every few years if you would like to be modern and
+          comfortable.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    effect: 'fade',
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
