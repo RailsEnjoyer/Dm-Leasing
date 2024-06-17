@@ -1,0 +1,58 @@
+<% content_for :header_class, 'header-black' %>
+<section class="contacts">
+  <div class="container">
+    <h2 class="section-title contact__title">
+      Contact Me
+    </h2>
+    <p class="contacts__text">
+      Feel free to contact me with questions or potential partnerships
+    </p>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <div class="contacts__item-content">
+          <%= image_tag 'Telegram_logo.svg', style:"width: 80px; height: 80px" , class: 'contacts__item-img', alt: 'contact me via Telegram' %>
+          <h3 class="contacts__item-title">
+            Message me in Telegram
+          </h3>
+        </div>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__item-content">
+          <%= image_tag 'Gmail_logo.svg', style:"width: 80px; height: 80px" , class: 'contacts__item-img', alt: 'contact me via Gmail' %>
+          <h3 class="contacts__item-title">
+            Send me a mail
+          </h3>
+        </div>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__item-content">
+          <%= image_tag 'Github_logo.svg', style:"width: 80px; height: 80px" , class: 'contacts__item-img', alt: 'My projects on github' %>
+          <h3 class="contacts__item-title">
+            Check out my other projects
+          </h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="blog">
+  <div class="container">
+    <div class="blog__items">
+      <div class="blog__item">
+        <%= image_tag 'blog-1.jpg', class: 'blog__item-img', alt: 'blog page 1' %>
+        <h4 class="blog__item-title">
+          An easier way to buy your next Toyota..
+        </h4>
+        <%= link_to 'more', '#', class: 'blog__item-link' %>
+      </div>
+      <div class="blog__item">
+        <%= image_tag 'blog-2.jpg', class: 'blog__item-img', alt: 'blog page 2' %>
+        <h4 class="blog__item-title">
+          A Guide to Road-Tripping With Pets..
+        </h4>
+        <%= link_to 'more', '#', class: 'blog__item-link' %>
+      </div>
+    </div>
+    <%= link_to 'SHOW MORE', '#', class: 'showmore__link' %>
+  </div>
+<section>

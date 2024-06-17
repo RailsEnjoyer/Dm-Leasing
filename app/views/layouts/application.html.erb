@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <!-- header section starts -->
-      <header class="header">
+      <header class="header <%= yield(:header_class) %>" >
         <div class="container">
           <div class="header__inner">
             <%= link_to root_path, class: 'logo' do %>
@@ -24,7 +24,7 @@
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
-                  <%= link_to 'NEW CARS', '#', class: 'menu__list-link' %>
+                  <%= link_to 'NEW CARS', new_cars_path, class: 'menu__list-link' %>
                 </li>
                 <li class="menu__list-item">
                   <%= link_to 'PRE-OWNED CARS', '#', class: 'menu__list-link' %>
@@ -36,7 +36,7 @@
                   <%= link_to 'LEASE VS BUY', '#', class: 'menu__list-link' %>
                 </li>
                 <li class="menu__list-item">
-                  <%= link_to 'CONTACT US', '#', class: 'menu__list-link' %>
+                  <%= link_to 'CONTACT US', contact_path, class: 'menu__list-link' %>
                 </li>
               </ul>
             </nav>
