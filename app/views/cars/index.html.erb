@@ -1,0 +1,35 @@
+<% content_for :header_class, 'header-black' %>
+<section class="new__cars-choose">
+  <div class="container">
+    <h2 class="section-title">
+      Choose your car
+    </h2>
+    <div class="tabs">
+      <div class="tabs__btn">
+        <%= link_to 'Cars and Minivans', cars_path(body_type: ['Sedan', 'Hatchback', 'Estate', 'Coupe', 'Cabriolet', 'Minivan'], category: params[:category]), class: 'tabs__btn-item' %>
+        <%= link_to 'Trucks', cars_path(body_type: ['Truck'], category: params[:category]), class: 'tabs__btn-item' %>
+        <%= link_to 'Crossovers & SUVs', cars_path(body_type: ['SUV', 'Pickup'], category: params[:category]), class: 'tabs__btn-item' %>
+        <%= link_to 'Electrified', cars_path(engine_type: ['Electric', 'Hybrid'], category: params[:category]), class: 'tabs__btn-item' %>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__content-item">
+          <% @cars.each do |car| %>
+            <div class="card">
+              <%= image_tag car.image, class: 'card__img' if car.image.attached? %>
+              <div class="card__content">
+                <h4 class="card__title"><%= link_to car.name, car %></h4>
+                <p class="card__text">Starting from <%= car.price %>$</p>
+                <p class="card__price"><%= car.leasing_price %>$/mo</p>
+              </div>
+              <p class="card__link"><%= link_to 'see details', car_path(car) %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <%= will_paginate @cars, :previous_label => '< Back', :next_label => 'Next >', :inner_window => 1, :outer_window => 0 %>
+    </div>
+  </div>
+</section>
+<%= render 'pages/blog' %>

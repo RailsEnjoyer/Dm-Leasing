@@ -16,6 +16,8 @@ gem "stimulus-rails"
 
 gem "jbuilder"
 
+gem 'will_paginate', '~> 4.0'
+
 gem "bootsnap", require: false
 
 group :development, :test do

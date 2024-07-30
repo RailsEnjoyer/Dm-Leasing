@@ -21,6 +21,10 @@
   color: #83bbfa;
 }
 
+.menu__list--active {
+  color: #83bbfa;
+}
+
 .header {
   background-color: transparent;
   position: absolute;
